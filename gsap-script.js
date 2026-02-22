@@ -1,3 +1,5 @@
+// Version: v1.0.1
+
 let mm = gsap.matchMedia();
 
 /* ================= DESKTOP ONLY ================= */
@@ -156,7 +158,7 @@ mm.add("(min-width: 1529px) and (max-width: 1550px)", () => {
     scrollTrigger: {
       trigger: ".recipe",
       start: "top 60%",
-      end: "30% 80%",
+      end: "30% 25%",
       scrub: 1,
       // markers: true
     }
