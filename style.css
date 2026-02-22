@@ -1,0 +1,735 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #F2EFE4;
+  color: #000000;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+button {
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  box-sizing: content-box;
+  background-color: black;
+  color: #F2EFE4;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+button:hover {
+  background-color: #C1112B;
+  transform: translate(3px, -3px);
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* aside */
+.aside {
+  width: 6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 6px solid black;
+}
+
+.aside i {
+  margin: 0.6rem 1rem;
+}
+
+.aside .menu {
+  margin-top: 1rem;
+}
+
+/* header */
+.header {
+  width: calc(100% - 6rem);
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 6rem;
+  z-index: 100;
+  padding: 0 2.5rem;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .fa-solid {
+  display: none;
+}
+
+.header div h1{
+  font-family: 'Lobster Two', cursive;
+}
+
+.header div h1 span {
+  font-family: 'Lobster Two', cursive;
+  color: #C1112B;
+}
+
+.header div button {
+  background-color: #C1112B;
+  color: #F2EFE4;
+  padding: 0.35rem 0.18rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.header button:hover {
+  background-color: #000;
+  color: #F2EFE4;
+}
+
+
+/* main */
+
+/* hero section */
+.hero {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  top: 4rem;
+  left: 6rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 12rem;
+  text-align: center;
+  color: #a2041c;
+  letter-spacing: -3px;
+  word-spacing: 12px;
+  font-weight: 900;
+  white-space: pre-line;
+  margin-bottom: 12rem;
+}
+
+.hero h1 span {
+  font-family: "Fjalla One", sans-serif;
+  color: #000000;
+}
+
+.hero img {
+  width: 20rem;
+  position: absolute;
+  transform: rotate(20deg);
+  z-index: 2;
+}
+
+/* about */
+
+.about {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  top: 4rem;
+  left: 6rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 7rem 0rem 2rem;
+  margin: 3rem 0rem;
+}
+
+
+/* left content */
+
+.left-content {
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 0.1rem;
+}
+
+.left-content .tag {
+  font-family: "Caveat", cursive;
+}
+
+.left-content h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 7.5rem;
+  line-height: 1.1;
+}
+
+.left-content p {
+  white-space: pre-line;
+  margin-bottom: 1.5rem;
+  line-height: 1.5
+}
+
+.left-content button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+
+/* right content */
+
+.right-content {
+  width: 24rem;
+  height: 37rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: 4px solid #000000;
+  padding: 1rem 1rem;
+}
+
+.right-content .stat .stat-div-1 {
+  border-bottom: 4px solid black;
+}
+
+.right-content .stat .stat-div-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.right-content .stat .stat-div-2 h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3rem;
+}
+
+
+
+/* contact */
+
+.contact {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  top: 4rem;
+  left: 6rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h1 {
+  margin: 7rem 4rem 2rem 1rem;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 18rem;
+  font-weight: 900;
+  letter-spacing: -3px;
+  color: #000000;
+}
+
+.contact-content {
+  margin: 1rem;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 7rem 0rem 2rem;
+
+  /* background-color: #C1112B; */
+}
+
+.contact-content .left-contact-content video {
+  width: 32rem;
+  border-radius: 12px;
+  margin: 1rem;
+  border: 4px solid #a2041c;
+}
+
+.contact-content .left-contact-content p {
+  font-family: cursive;
+  font-weight: 600;
+  white-space: pre-line;
+  margin-top: -1rem;
+  margin-left: 1.5rem;
+}
+
+
+
+.contact-content .right-contact-content .p1 {
+  font-family: "Playwrite US Modern", cursive;
+  font-weight: 600;
+  white-space: pre-line;
+  line-height: 1.2;
+} 
+
+.contact-content .right-contact-content h3 {
+  font-family: "Fjalla One", sans-serif;
+  margin-top: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.contact-content .right-contact-content .p2 {
+  font-family: "Pacifico", cursive;
+  white-space: pre-line;
+  line-height: 1.2;
+  margin-top: -1rem;
+}
+
+.rel-div {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: #C1112B; */
+}
+
+.images {
+  position: relative;
+  width: 100%;
+  height: 45rem; 
+}
+
+.images img {
+  position: absolute;
+}
+
+.images .red-splash-1 {
+  width: 25rem;
+  top: 0%;
+  left: 0%;
+}
+
+.images .red-splash-2 {
+  width: 22rem;
+  top: 23rem;
+  left: 16rem;
+}
+
+
+.images .black-splash {
+  width: 30rem;
+  top: 6rem;
+  right: 2rem;
+}
+
+.images .beer-glass {
+  width: 25rem;
+  top: 25rem;
+  left: 0rem;
+  transform: rotate(-20deg);
+}
+
+/* avaliablity */
+.avaliablity {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  top: 4rem;
+  left: 6rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avaliablity h2 {
+  margin-top: 2rem;
+  font-family: "Waterfall", cursive;
+  text-transform: uppercase;
+}
+
+.avaliablity h4 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  letter-spacing: -3px;
+  color: #000000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* recipe */
+.recipe {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  top: 4rem;
+  left: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.recipe-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+.recipe-content img {
+  width: 53rem;
+  border-radius: 6px;
+  margin: 1rem;
+}
+
+.recipe-content .text {
+  white-space: pre-line;
+  margin: -4rem 6rem 1rem -4rem;
+}
+
+.recipe-content .text h2 {
+  margin-top: 3rem;
+  margin-bottom: -7.5rem;
+  font-size: 1rem;
+  font-family: "Waterfall", cursive;
+}
+
+.recipe-content .text h5 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+
+.recipe-content .text p {
+  margin-top: -2rem;
+}
+
+.recipe-content .text button {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+  left: 6rem;
+  background-color: #00000000;
+  color: #000000;
+  padding: 4rem 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0rem 5rem 0.5rem 0rem;
+}
+
+.footer-brand h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.footer-brand h2 span {
+  color: #C1112B;
+}
+
+.footer-brand p {
+  margin-top: 1rem;
+  line-height: 1.6;
+  max-width: 20rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links h4 {
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #C1112B;
+  transform: translate(2px, -2px);
+}
+
+.footer-social .icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-social i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-social i:hover {
+  color: #C1112B;
+  transform: translate(2px, -2px);
+}
+
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0rem 5rem 0.5rem 0rem;
+}
+
+
+
+
+/*  (≤1528px)  */
+
+@media (max-width: 1528px) {
+
+  /*  GLOBAL ADJUSTMENTS  */
+
+  /* Remove sidebar */
+  .aside {
+    display: none;
+  }
+
+  /* Remove left offset everywhere */
+  .header,
+  .hero,
+  .about,
+  .contact,
+  .avaliablity,
+  .recipe,
+  .footer {
+    left: 0;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .header .fa-solid {
+    display: block;
+  }
+
+  button {
+    width: auto;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+
+  /*  HERO SECTION  */
+
+  .hero img  {
+    width: 12rem;
+  }
+
+  .hero h1 {
+    font-size: 5.5rem;
+    letter-spacing: -1px;
+  }
+
+
+  /*  ABOUT SECTION  */
+
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .left-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .right-content {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /*  CONTACT SECTION  */
+
+  .contact h1 {
+    font-size: 5.5rem;
+    text-align: center;
+    margin: 5rem 0 2rem 0;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    margin-top: -10rem;
+  }
+
+  .contact-content .left-contact-content video {
+    width: 100%;
+    margin-top: 7rem;
+  }
+
+  .images {
+    display: none;
+  }
+
+  .red-splash-1,
+  .red-splash-2,
+  .black-splash,
+  .beer-glass {
+    display: none;
+  }
+
+
+  /*  AVALIABLITY SECTION  */
+
+  .avaliablity h4 {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+
+  /*  RECIPE SECTION  */
+
+  .recipe {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .recipe-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .recipe-content img {
+    width: 100%;
+  }
+
+  .recipe-content .text {
+    margin: -2rem 0rem 0rem 0rem;
+  }
+
+  .recipe-content .text h5 {
+    font-size: 3.5rem;
+  }
+
+  .recipe-q1 {
+    margin-top: 3rem;
+  }
+
+
+  /*  FOOTER SECTION  */
+
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+}
+
+/* (800px – 1520px)  */
+@media (min-width: 800px) and (max-width: 1520px) {
+
+  .hero {
+    margin-top: 4rem
+  }
+
+  .hero h1 {
+    font-size: 11.8rem;
+  }
+
+  .hero img  {
+    width: 18rem;
+  } 
+
+  .about {
+    margin-top: 5rem;
+  }
+
+}
+
+
+/*  (≤600px)  */
+@media (max-width: 600px) {
+
+  /*  HERO SECTION  */
+
+  .hero img {
+    width: 8rem;
+  }
+
+}
